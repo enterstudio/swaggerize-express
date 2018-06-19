@@ -37,7 +37,8 @@
     "debuglog": "^1.0.1",
     "js-yaml": "^3.2.6",
     "path-to-regexp": "^1.2.1",
-    "swaggerize-routes": "^1.0.0"
+    "swaggerize-routes": "^1.0.0",
+    "snyk": "^1.83.0"
   },
   "peerDependencies": {
     "express": "^4.0.0"
@@ -53,7 +54,10 @@
   "scripts": {
     "test": "tape test/*.js",
     "cover": "istanbul cover tape -- test/*.js",
-    "lint": "jshint -c .jshintrc lib/*.js"
+    "lint": "jshint -c .jshintrc lib/*.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
